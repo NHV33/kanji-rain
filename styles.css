@@ -1,0 +1,68 @@
+body {
+    position: relative;
+    background: url(https://images.unsplash.com/photo-1586128951891-bb0ef219cf67?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    /* background-size: cover; */
+    background-position: top;
+    background-position-x: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+}
+
+#bg-filter{
+    background-color: rgba(0, 0, 0, 0.7);
+    /* backdrop-filter: blur(1px); */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#rain-filter{
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    backdrop-filter: blur(1px);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#rain-box{
+    /* background-color: black; */
+    position: fixed;
+    top: 0;
+    /* These values give a perfect margin */
+    left: 5vw;
+    width: 95vw;
+    height: 100vh;
+}
+
+.kanji-rain {
+    position: absolute;
+    color: white;
+    font-size: 10vmin;
+}
+
+@keyframes fall-down {
+    0% {
+        transform: translate(0vh, 0vh);
+        opacity: 0%;
+    }
+    10% {
+        transform: translate(0vh, 10vh);
+        opacity: 90%;
+    }
+    100% {
+        transform: translate(0vh, 100vh);
+        opacity: 0%;
+    }
+}
+
+.fall {
+    animation: fall-down 7s linear 0s 1 normal forwards;
+}
+
+.fade-in {
+    animation: fade-in 7s linear 0s 1 normal forwards;
+}
